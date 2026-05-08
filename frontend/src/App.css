@@ -1,0 +1,230 @@
+/* Kurry Leaf Restaurant - Global Styles */
+
+/* Base reset for mobile */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-padding-top: 70px;
+  -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
+}
+
+/* Remove default focus outline and add custom */
+*:focus {
+  outline: none;
+}
+
+*:focus-visible {
+  outline: 2px solid hsl(var(--ring));
+  outline-offset: 2px;
+}
+
+/* Image optimization - prevent overflow */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Prevent text selection on buttons */
+button {
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Touch-friendly tap targets */
+a, button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Loading spinner animation */
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid hsl(var(--muted));
+  border-top-color: hsl(var(--primary));
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Mobile-first responsive utilities */
+@media (max-width: 480px) {
+  html {
+    scroll-padding-top: 60px;
+  }
+  
+  /* Prevent horizontal scroll */
+  .section-container {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    overflow-x: hidden;
+  }
+  
+  /* Reduce section spacing on mobile */
+  .section-spacing {
+    padding-top: 48px !important;
+    padding-bottom: 48px !important;
+  }
+  
+  /* Smaller fonts on mobile */
+  h1 {
+    font-size: 1.75rem !important;
+    line-height: 1.2 !important;
+  }
+  
+  h2 {
+    font-size: 1.5rem !important;
+    line-height: 1.3 !important;
+  }
+  
+  h3 {
+    font-size: 1.125rem !important;
+  }
+  
+  /* Touch-friendly buttons */
+  button, .btn {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* Prevent any element from causing overflow */
+.overflow-hidden {
+  overflow: hidden !important;
+}
+
+/* Mobile menu animation */
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* === COMPLETE Emergent branding removal === */
+
+/* Direct class/id/attribute selectors */
+[data-testid="emergent-badge"],
+[data-testid*="emergent"],
+[data-testid*="Emergent"],
+.emergent-badge,
+.emergent-watermark,
+[class*="emergent"],
+[class*="Emergent"],
+[id*="emergent"],
+[id*="Emergent"],
+a[href*="emergentagent.com"]:not([href*="customer-assets"]),
+div[class*="Emergent"],
+span[class*="Emergent"],
+img[alt*="Emergent"],
+img[alt*="emergent"],
+img[src*="emergent"]:not([src*="customer-assets"]),
+[data-badge],
+[data-watermark],
+[data-branding] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  height: 0 !important;
+  width: 0 !important;
+  overflow: hidden !important;
+  position: absolute !important;
+  left: -9999px !important;
+  z-index: -9999 !important;
+}
+
+/* Hide ANY fixed/absolute element outside #root (injected badges) */
+body > div:not(#root),
+body > a:not(#root),
+body > span:not(#root),
+body > p:not(#root),
+body > section:not(#root),
+body > aside:not(#root),
+body > footer:not(#root),
+body > header:not(#root) {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  height: 0 !important;
+  width: 0 !important;
+  pointer-events: none !important;
+  position: absolute !important;
+  left: -9999px !important;
+}
+
+/* Hide fixed-position badge injections */
+body > div[style*="position: fixed"],
+body > div[style*="position:fixed"],
+body > a[style*="position: fixed"],
+body > a[style*="position:fixed"],
+body > div[style*="z-index"],
+body > a[style*="z-index"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+/* Hide iframe-based badges */
+iframe[src*="emergent"],
+iframe:not([title="Location"]) {
+  display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+  width: 0 !important;
+}
+
+/* Prevent ::after / ::before pseudo-element badges on body/html */
+body::after,
+body::before,
+html::after,
+html::before {
+  display: none !important;
+  content: none !important;
+}
+
+/* Nuclear: hide any non-root element that is body's last visible child */
+body > *:last-child:not(#root):not(script):not(style):not(noscript):not(link) {
+  display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+  width: 0 !important;
+}
