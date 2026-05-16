@@ -5,7 +5,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Star, Quote, ExternalLink, RefreshCw } from 'lucide-react';
 
-const REVIEW_REDIRECT = 'https://search.google.com/local/writereview?placeid=ChIJKwbBjK6C2TsR5cTxh1fquBY';
+const REVIEW_REDIRECT = 'https://share.google/NG3pCUeAMgPUBIw8b';
 const API_URL = process.env.REACT_APP_BACKEND_URL;
 
 const RatingStars = ({ rating }) => (

@@ -6,8 +6,8 @@ import { Textarea } from '@/components/ui/textarea';
 import { useApp } from '@/context/AppContext';
 import { toast } from 'sonner';
 
-const GOOGLE_REVIEW_URL = 'https://search.google.com/local/writereview?placeid=ChIJKwbBjK6C2TsR5cTxh1fquBY';
-const REVIEW_REDIRECT = 'https://search.google.com/local/writereview?placeid=ChIJKwbBjK6C2TsR5cTxh1fquBY';
+const GOOGLE_REVIEW_URL = 'https://share.google/NG3pCUeAMgPUBIw8b';
+const REVIEW_REDIRECT = 'https://share.google/NG3pCUeAMgPUBIw8b';
 
 export const GoogleReviewPrompt = () => {
   const { config } = useApp();

@@ -269,7 +269,7 @@ async def get_google_reviews():
     data = await fetch_google_reviews()
     return data
 
-GOOGLE_REVIEW_WRITE_URL = f"https://search.google.com/local/writereview?placeid={GOOGLE_PLACE_ID}"
+GOOGLE_REVIEW_WRITE_URL = "https://share.google/NG3pCUeAMgPUBIw8b"
 
 @api_router.get("/reviews/redirect")
 async def redirect_to_google_review():
