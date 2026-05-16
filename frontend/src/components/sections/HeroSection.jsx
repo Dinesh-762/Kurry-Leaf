@@ -109,7 +109,7 @@ export const HeroSection = () => {
               View Menu
             </Button>
             <a 
-              href={`https://wa.me/917620158315?text=${encodeURIComponent('Hi! I would like to place an order from Kurry Leaf Restaurant.')}`}
+              href={`https://wa.me/919270209612?text=${encodeURIComponent('Hello Kurry Leaf, I want to order food')}`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center rounded-md border border-white/30 text-white px-6 py-3 text-sm font-medium transition-colors hover:bg-white/10 w-full sm:w-auto min-w-[160px]"

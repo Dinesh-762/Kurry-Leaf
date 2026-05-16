@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { X, MessageCircle, ShoppingBag } from 'lucide-react';
 import { useApp } from '@/context/AppContext';
 
-const WA_BASE = 'https://wa.me/917620158315';
+const WA_BASE = 'https://wa.me/919270209612';
 
 export const FloatingWhatsApp = () => {
   const [isOpen, setIsOpen] = useState(false);

@@ -22,7 +22,7 @@ export const ContactSection = () => {
     e.preventDefault();
     const msg = `Hi Kurry Leaf!\n\nName: ${formData.name}\nPhone: ${formData.phone}\nMessage: ${formData.message}`;
     const link = document.createElement('a');
-    link.href = `https://wa.me/917620158315?text=${encodeURIComponent(msg)}`;
+    link.href = `https://wa.me/919270209612?text=${encodeURIComponent(msg)}`;
     link.target = '_blank';
     link.rel = 'noopener noreferrer';
     document.body.appendChild(link);
