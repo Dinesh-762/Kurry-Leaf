@@ -26,13 +26,6 @@ export const GoogleReviewPrompt = () => {
   };
 
   const handleGoogleRedirect = () => {
-    const a = document.createElement('a');
-    a.href = REVIEW_REDIRECT;
-    a.target = '_blank';
-    a.rel = 'noopener noreferrer';
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
     setStep('done');
   };
 
@@ -148,14 +141,17 @@ export const GoogleReviewPrompt = () => {
                     <p className="text-muted-foreground text-sm mb-6 leading-relaxed">
                       We're thrilled you enjoyed your experience! Would you mind sharing your thoughts on Google? It helps others discover {config.name}.
                     </p>
-                    <Button
+                    <a
+                      href={REVIEW_REDIRECT}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       onClick={handleGoogleRedirect}
-                      className="w-full sm:w-auto min-w-[200px] h-12 text-base gap-2"
+                      className="inline-flex items-center justify-center gap-2 rounded-md bg-primary text-primary-foreground w-full sm:w-auto min-w-[200px] h-12 text-base px-6 font-medium hover:bg-primary/90 transition-colors"
                       data-testid="review-google-redirect-btn"
                     >
                       <ExternalLink className="w-4 h-4" />
                       Leave a Google Review
-                    </Button>
+                    </a>
                     <button
                       onClick={handleReset}
                       className="block mx-auto mt-3 text-xs text-muted-foreground/60 hover:text-muted-foreground transition-colors"
