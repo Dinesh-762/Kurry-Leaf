@@ -21,7 +21,13 @@ export const ContactSection = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const msg = `Hi Kurry Leaf!\n\nName: ${formData.name}\nPhone: ${formData.phone}\nMessage: ${formData.message}`;
-    window.open(`https://wa.me/91${config.phone}?text=${encodeURIComponent(msg)}`, '_blank');
+    const link = document.createElement('a');
+    link.href = `https://wa.me/917620158315?text=${encodeURIComponent(msg)}`;
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
     setSubmitted(true);
     toast.success('Message sent!');
     setTimeout(() => {

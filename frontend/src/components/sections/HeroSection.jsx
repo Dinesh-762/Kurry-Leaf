@@ -108,14 +108,14 @@ export const HeroSection = () => {
             >
               View Menu
             </Button>
-            <Button 
-              variant="elegant-outline" 
-              size="lg"
-              onClick={() => window.open(`https://wa.me/91${config.phone}?text=Hi! I would like to place an order from Kurry Leaf Restaurant.`, '_blank')}
-              className="w-full sm:w-auto min-w-[160px]"
+            <a 
+              href={`https://wa.me/917620158315?text=${encodeURIComponent('Hi! I would like to place an order from Kurry Leaf Restaurant.')}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center rounded-md border border-white/30 text-white px-6 py-3 text-sm font-medium transition-colors hover:bg-white/10 w-full sm:w-auto min-w-[160px]"
             >
               Order on WhatsApp
-            </Button>
+            </a>
           </motion.div>
 
           {/* Location, Contact & Instagram */}
