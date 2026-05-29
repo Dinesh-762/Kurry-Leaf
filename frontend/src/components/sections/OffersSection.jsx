@@ -90,7 +90,7 @@ export const OffersSection = () => {
             <h4 className="font-semibold text-foreground mb-2">🚚 Delivery Information</h4>
             <p className="text-muted-foreground text-sm">
               Free delivery on orders ₹{adminSettings.freeDeliveryMin}+ • 
-              Within 2km: Free • 2-5km: ₹10 • 5-8km: ₹20
+              Within 2km: Free • 2-5km: ₹20 • 5-8km: ₹30
             </p>
             {adminSettings.peakChargeEnabled && (
               <p className="text-accent text-xs mt-2">
