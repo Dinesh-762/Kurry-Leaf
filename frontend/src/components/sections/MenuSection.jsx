@@ -13,6 +13,7 @@ const menuCategories = [
   { id: 'mains', name: 'Main Course' },
   { id: 'biryani', name: 'Biryani' },
   { id: 'thali', name: 'Thali' },
+  { id: 'mocktails', name: 'Mocktails' },
   { id: 'beverages', name: 'Beverages' },
 ];
 
@@ -42,7 +43,11 @@ const menuItems = {
   beverages: [
     { id: 14, name: 'Mango Lassi', description: 'Sweet yogurt with fresh mango', price: 80, image: 'https://images.unsplash.com/photo-1527661591475-527312dd65f5?w=400' },
     { id: 15, name: 'Masala Chai', description: 'Traditional spiced tea', price: 40, image: 'https://images.unsplash.com/photo-1571934811356-5cc061b6821f?w=400' },
-    { id: 16, name: 'Virgin Mojito', description: 'Refreshing mint lime cooler', price: 80, image: 'https://customer-assets.emergentagent.com/job_4848df9b-fe06-42bf-958b-1b30e0cbce96/artifacts/ggrnzt37_WhatsApp%20Image%202026-02-10%20at%207.15.09%20PM%20%283%29.jpeg' },
+  ],
+  mocktails: [
+    { id: 20, name: 'Virgin Mojito', description: 'Classic lime & mint cooler with a refreshing fizz', price: 70, image: 'https://customer-assets.emergentagent.com/job_ac65c625-03b2-4167-85de-6caf2daabc02/artifacts/lkejt919_mocktail2.jpeg' },
+    { id: 21, name: 'Kalakhatta Mojito', description: 'Tangy berry-spiced mojito with a desi twist', price: 120, image: 'https://customer-assets.emergentagent.com/job_ac65c625-03b2-4167-85de-6caf2daabc02/artifacts/as1xmpvs_mocktail%201.jpeg' },
+    { id: 22, name: 'Watermelon Mojito', description: 'Fresh watermelon blended with mint & lime', price: 130, image: 'https://customer-assets.emergentagent.com/job_ac65c625-03b2-4167-85de-6caf2daabc02/artifacts/kwfp49ky_mocktail3.jpeg' },
   ],
 };
 
@@ -72,7 +77,7 @@ const MenuItem = ({ item }) => {
           <img
             src={item.image}
             alt={item.name}
-            className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105"
+            className="w-full aspect-[4/3] object-cover transition-transform duration-500 group-hover:scale-105"
             loading="lazy"
           />
           <div className="absolute top-3 left-3 flex gap-2">
