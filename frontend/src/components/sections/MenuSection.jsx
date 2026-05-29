@@ -22,9 +22,8 @@ const menuItems = {
     { id: 3, name: 'Grand Veg Thali', description: 'Complete meal with 8 seasonal preparations', price: 450, image: 'https://images.unsplash.com/photo-1742281258189-3b933879867a?w=400', isChefSpecial: true },
   ],
   starters: [
-    { id: 4, name: 'Crispy Corn Pepper', description: 'Golden corn in aromatic pepper sauce', price: 180, image: 'https://customer-assets.emergentagent.com/job_vegdelight-4/artifacts/m9ubxqjm_WhatsApp%20Image%202026-01-27%20at%204.43.29%20PM.jpeg', isSpicy: true },
-    { id: 5, name: 'Hara Bhara Kebab', description: 'Spinach and green pea patties with cashew', price: 200, image: 'https://customer-assets.emergentagent.com/job_4848df9b-fe06-42bf-958b-1b30e0cbce96/artifacts/qbu9xbvg_WhatsApp%20Image%202026-02-10%20at%207.15.09%20PM%20%281%29.jpeg', isChefSpecial: true },
-    { id: 6, name: 'Paneer Tikka', description: 'Classic tandoor grilled cottage cheese', price: 240, image: 'https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=400' },
+    { id: 4, name: 'Veg Lolypop', description: 'Crispy spiced vegetable lollipops served with tangy dipping sauce', price: 260, image: 'https://customer-assets.emergentagent.com/job_ac65c625-03b2-4167-85de-6caf2daabc02/artifacts/wjl9vo3g_starter%201%20.jpeg' },
+    { id: 5, name: 'Cheese Ciga Role', description: 'Golden crispy rolls stuffed with melted cheese & herbs', price: 310, image: 'https://customer-assets.emergentagent.com/job_ac65c625-03b2-4167-85de-6caf2daabc02/artifacts/9iqbbbbe_starter%203.jpeg' },
   ],
   mains: [
     { id: 7, name: 'Paneer Butter Masala', description: 'Silken paneer in rich tomato-cream gravy', price: 280, image: 'https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=400' },
