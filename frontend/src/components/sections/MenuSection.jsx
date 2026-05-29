@@ -12,9 +12,7 @@ const menuCategories = [
   { id: 'starters', name: 'Starters' },
   { id: 'mains', name: 'Main Course' },
   { id: 'biryani', name: 'Biryani' },
-  { id: 'thali', name: 'Thali' },
   { id: 'mocktails', name: 'Mocktails' },
-  { id: 'beverages', name: 'Beverages' },
 ];
 
 const menuItems = {
@@ -35,14 +33,6 @@ const menuItems = {
   biryani: [
     { id: 10, name: 'Veg Dum Biryani', description: 'Layered rice with seasonal vegetables', price: 280, image: 'https://images.unsplash.com/photo-1633945274417-ab205ae69d10?w=400', isSpicy: true },
     { id: 11, name: 'Paneer Biryani', description: 'Fragrant rice with spiced cottage cheese', price: 320, image: 'https://images.unsplash.com/photo-1633945274405-b6c8069047b0?w=400' },
-  ],
-  thali: [
-    { id: 12, name: 'Executive Thali', description: 'Dal, 2 sabji, rice, rotis, papad, pickle, sweet', price: 250, image: 'https://images.unsplash.com/photo-1742281257707-0c7f7e5ca9c6?w=400' },
-    { id: 13, name: 'Maharaja Thali', description: 'Premium feast with paneer, dal, 3 sabji, biryani', price: 450, image: 'https://images.unsplash.com/photo-1742281257687-092746ad6021?w=400', isChefSpecial: true },
-  ],
-  beverages: [
-    { id: 14, name: 'Mango Lassi', description: 'Sweet yogurt with fresh mango', price: 80, image: 'https://images.unsplash.com/photo-1527661591475-527312dd65f5?w=400' },
-    { id: 15, name: 'Masala Chai', description: 'Traditional spiced tea', price: 40, image: 'https://images.unsplash.com/photo-1571934811356-5cc061b6821f?w=400' },
   ],
   mocktails: [
     { id: 20, name: 'Virgin Mojito', description: 'Classic lime & mint cooler with a refreshing fizz', price: 70, image: 'https://customer-assets.emergentagent.com/job_ac65c625-03b2-4167-85de-6caf2daabc02/artifacts/lkejt919_mocktail2.jpeg' },
