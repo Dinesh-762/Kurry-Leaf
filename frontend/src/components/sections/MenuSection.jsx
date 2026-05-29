@@ -26,8 +26,8 @@ const menuItems = {
     { id: 5, name: 'Cheese Ciga Role', description: 'Golden crispy rolls stuffed with melted cheese & herbs', price: 310, image: 'https://customer-assets.emergentagent.com/job_ac65c625-03b2-4167-85de-6caf2daabc02/artifacts/9iqbbbbe_starter%203.jpeg' },
   ],
   mains: [
-    { id: 7, name: 'Paneer Butter Masala', description: 'Silken paneer in rich tomato-cream gravy', price: 280, image: 'https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=400' },
-    { id: 9, name: 'Malai Kofta', description: 'Dumplings in cashew-cream sauce', price: 320, image: 'https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=400' },
+    { id: 7, name: 'Veg Patiyala', description: 'Rich Patiala-style gravy with cream drizzle & fresh herbs', price: 285, image: 'https://customer-assets.emergentagent.com/job_ac65c625-03b2-4167-85de-6caf2daabc02/artifacts/5qcsiiwx_main%20c%201%20.jpeg' },
+    { id: 8, name: 'Paneer Kurchan', description: 'Herbed spinach paneer with artistic plating & garnish', price: 280, image: 'https://customer-assets.emergentagent.com/job_ac65c625-03b2-4167-85de-6caf2daabc02/artifacts/fy86szrd_main%201%20.jpeg' },
   ],
   biryani: [
     { id: 10, name: 'Veg Dum Biryani', description: 'Layered rice with seasonal vegetables', price: 280, image: 'https://images.unsplash.com/photo-1633945274417-ab205ae69d10?w=400', isSpicy: true },
