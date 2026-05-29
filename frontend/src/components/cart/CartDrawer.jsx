@@ -24,23 +24,23 @@ const CartDrawer = () => {
   const deliveryCharge = getDeliveryCharge();
   const total = subtotal + deliveryCharge;
 
+  const getWhatsAppUrl = () => {
+    const itemsList = cart.map(item => `${item.name} x${item.quantity} = ₹${item.price * item.quantity}`).join('\n');
+    const msg = `New Order from ${config.name} Website\n\nCustomer: ${customerInfo.name}\nPhone: ${customerInfo.phone}\nAddress: ${customerInfo.address}\n\nItems:\n${itemsList}\n\nSubtotal: ₹${subtotal}\nDelivery: ₹${deliveryCharge}\nTotal: ₹${total}`;
+    return `https://wa.me/919270209612?text=${encodeURIComponent(msg)}`;
+  };
+
   const handleCheckout = () => {
     if (!customerInfo.name || !customerInfo.phone || !customerInfo.address) {
       toast.error('Please fill all delivery details');
-      return;
+      return false;
     }
-    const itemsList = cart.map(item => `${item.name} x${item.quantity} = ₹${item.price * item.quantity}`).join('\n');
-    const msg = `New Order from ${config.name} Website\n\nCustomer: ${customerInfo.name}\nPhone: ${customerInfo.phone}\nAddress: ${customerInfo.address}\n\nItems:\n${itemsList}\n\nSubtotal: ₹${subtotal}\nDelivery: ₹${deliveryCharge}\nTotal: ₹${total}`;
-    const link = document.createElement('a');
-    link.href = `https://wa.me/919270209612?text=${encodeURIComponent(msg)}`;
-    link.target = '_blank';
-    link.rel = 'noopener noreferrer';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    setIsOpen(false);
-    setIsCheckout(false);
-    toast.success('Order sent via WhatsApp!');
+    setTimeout(() => {
+      setIsOpen(false);
+      setIsCheckout(false);
+      toast.success('Order sent via WhatsApp!');
+    }, 500);
+    return true;
   };
 
   if (!adminSettings.orderingEnabled || totalItems === 0) return null;
@@ -234,9 +234,16 @@ const CartDrawer = () => {
                     </Button>
                   </>
                 ) : (
-                  <Button onClick={handleCheckout} className="w-full h-12 text-base gap-2" data-testid="place-order-btn">
+                  <a
+                    href={getWhatsAppUrl()}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={(e) => { if (!handleCheckout()) e.preventDefault(); }}
+                    className="flex items-center justify-center gap-2 w-full h-12 text-base rounded-md bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition-colors"
+                    data-testid="place-order-btn"
+                  >
                     <Send className="w-4 h-4" /> Place Order via WhatsApp
-                  </Button>
+                  </a>
                 )}
               </div>
             </motion.div>

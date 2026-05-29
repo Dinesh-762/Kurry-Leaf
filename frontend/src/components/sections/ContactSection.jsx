@@ -18,16 +18,13 @@ export const ContactSection = () => {
   const [submitted, setSubmitted] = useState(false);
   const [mapError, setMapError] = useState(false);
 
+  const getWhatsAppUrl = () => {
+    const msg = `Hi Kurry Leaf!\n\nName: ${formData.name}\nPhone: ${formData.phone}\nMessage: ${formData.message}`;
+    return `https://wa.me/919270209612?text=${encodeURIComponent(msg)}`;
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    const msg = `Hi Kurry Leaf!\n\nName: ${formData.name}\nPhone: ${formData.phone}\nMessage: ${formData.message}`;
-    const link = document.createElement('a');
-    link.href = `https://wa.me/919270209612?text=${encodeURIComponent(msg)}`;
-    link.target = '_blank';
-    link.rel = 'noopener noreferrer';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
     setSubmitted(true);
     toast.success('Message sent!');
     setTimeout(() => {
@@ -172,7 +169,7 @@ export const ContactSection = () => {
                     <p className="text-muted-foreground text-sm mt-2">We'll get back to you soon.</p>
                   </div>
                 ) : (
-                  <form onSubmit={handleSubmit} className="space-y-5">
+                  <form className="space-y-5">
                     <div>
                       <Input
                         placeholder="Your Name *"
@@ -204,9 +201,16 @@ export const ContactSection = () => {
                         data-testid="contact-message-input"
                       />
                     </div>
-                    <Button type="submit" variant="elegant" size="lg" className="w-full" data-testid="contact-submit-btn">
+                    <a
+                      href={getWhatsAppUrl()}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={handleSubmit}
+                      className="flex items-center justify-center w-full h-11 rounded-md bg-primary text-primary-foreground text-sm font-medium hover:bg-primary/90 transition-colors"
+                      data-testid="contact-submit-btn"
+                    >
                       <Send className="w-4 h-4 mr-2" /> Send Message
-                    </Button>
+                    </a>
                   </form>
                 )}
               </CardContent>
