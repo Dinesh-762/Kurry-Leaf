@@ -16,8 +16,8 @@ const RESTAURANT_CONFIG = {
   freeDeliveryMin: 299,
   deliverySlabs: [
     { maxKm: 2, charge: 0 },
-    { maxKm: 5, charge: 10 },
-    { maxKm: 8, charge: 20 },
+    { maxKm: 5, charge: 20 },
+    { maxKm: 8, charge: 30 },
   ],
   peakHours: { start: 18, end: 21 }, // 6 PM - 9 PM
   peakCharge: 10,
@@ -36,8 +36,11 @@ const DEFAULT_ADMIN_SETTINGS = {
 };
 
 export const AppProvider = ({ children }) => {
-  // Cart State
-  const [cart, setCart] = useState([]);
+  // Cart State (persisted in localStorage)
+  const [cart, setCart] = useState(() => {
+    const saved = localStorage.getItem('kurryleaf_cart');
+    return saved ? JSON.parse(saved) : [];
+  });
   const [customerLocation, setCustomerLocation] = useState(null);
   const [deliveryDistance, setDeliveryDistance] = useState(null);
   
@@ -58,6 +61,11 @@ export const AppProvider = ({ children }) => {
     const saved = localStorage.getItem('kurryleaf_reviews');
     return saved ? JSON.parse(saved) : [];
   });
+
+  // Persist cart
+  useEffect(() => {
+    localStorage.setItem('kurryleaf_cart', JSON.stringify(cart));
+  }, [cart]);
 
   // Persist admin settings
   useEffect(() => {

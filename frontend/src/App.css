@@ -172,15 +172,12 @@ img[src*="emergent"]:not([src*="customer-assets"]),
   z-index: -9999 !important;
 }
 
-/* Hide ANY fixed/absolute element outside #root (injected badges) */
-body > div:not(#root),
+/* Hide injected badge elements outside #root — targeted to avoid breaking Radix portals */
 body > a:not(#root),
 body > span:not(#root),
 body > p:not(#root),
 body > section:not(#root),
-body > aside:not(#root),
-body > footer:not(#root),
-body > header:not(#root) {
+body > aside:not(#root) {
   display: none !important;
   visibility: hidden !important;
   opacity: 0 !important;
@@ -191,21 +188,17 @@ body > header:not(#root) {
   left: -9999px !important;
 }
 
-/* Hide fixed-position badge injections */
-body > div[style*="position: fixed"],
-body > div[style*="position:fixed"],
+/* Hide fixed-position badge injections — only target inline-styled divs with emergent content */
+body > div[style*="position: fixed"]:not([data-radix-portal]):not([class]),
 body > a[style*="position: fixed"],
-body > a[style*="position:fixed"],
-body > div[style*="z-index"],
-body > a[style*="z-index"] {
+body > a[style*="position:fixed"] {
   display: none !important;
   visibility: hidden !important;
   opacity: 0 !important;
 }
 
 /* Hide iframe-based badges */
-iframe[src*="emergent"],
-iframe:not([title="Location"]) {
+iframe[src*="emergent"] {
   display: none !important;
   visibility: hidden !important;
   height: 0 !important;
@@ -219,12 +212,4 @@ html::after,
 html::before {
   display: none !important;
   content: none !important;
-}
-
-/* Nuclear: hide any non-root element that is body's last visible child */
-body > *:last-child:not(#root):not(script):not(style):not(noscript):not(link) {
-  display: none !important;
-  visibility: hidden !important;
-  height: 0 !important;
-  width: 0 !important;
 }
