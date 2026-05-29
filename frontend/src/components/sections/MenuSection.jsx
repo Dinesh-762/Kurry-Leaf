@@ -17,9 +17,9 @@ const menuCategories = [
 
 const menuItems = {
   signature: [
-    { id: 1, name: 'Paneer Tikka Royale', description: 'Premium cottage cheese chargrilled with aromatic spices', price: 320, image: 'https://images.unsplash.com/photo-1666001120694-3ebe8fd207be?w=400', isChefSpecial: true },
-    { id: 2, name: 'Dum Biryani Special', description: 'Slow-cooked aromatic basmati with vegetables & saffron', price: 350, image: 'https://images.unsplash.com/photo-1633945274417-ab205ae69d10?w=400', isChefSpecial: true },
-    { id: 3, name: 'Grand Veg Thali', description: 'Complete meal with 8 seasonal preparations', price: 450, image: 'https://images.unsplash.com/photo-1742281258189-3b933879867a?w=400', isChefSpecial: true },
+    { id: 1, name: 'Veg Lanchar', description: 'Herbed spinach patty with artistic plating & drizzle', price: 260, image: 'https://customer-assets.emergentagent.com/job_ac65c625-03b2-4167-85de-6caf2daabc02/artifacts/9go17kxb_sig%201%20.jpeg', isChefSpecial: true },
+    { id: 2, name: 'Paneer Matka Kebab', description: 'Slow-cooked paneer kebab served in a traditional clay pot', price: 330, image: 'https://customer-assets.emergentagent.com/job_ac65c625-03b2-4167-85de-6caf2daabc02/artifacts/iya2nc0g_sig%202.jpeg', isChefSpecial: true },
+    { id: 3, name: 'Paneer Kurchan', description: 'Rich creamy paneer in a spiced tomato gravy with fresh cream', price: 280, image: 'https://customer-assets.emergentagent.com/job_ac65c625-03b2-4167-85de-6caf2daabc02/artifacts/c04h7ml7_sig%203%20.jpeg', isChefSpecial: true },
   ],
   starters: [
     { id: 4, name: 'Veg Lolypop', description: 'Crispy spiced vegetable lollipops served with tangy dipping sauce', price: 260, image: 'https://customer-assets.emergentagent.com/job_ac65c625-03b2-4167-85de-6caf2daabc02/artifacts/wjl9vo3g_starter%201%20.jpeg' },
