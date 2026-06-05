@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/static/css/main.488f03fe.css",
-    "main.js": "/static/js/main.0bc0c0a8.js",
-    "index.html": "/index.html",
-    "main.488f03fe.css.map": "/static/css/main.488f03fe.css.map",
-    "main.0bc0c0a8.js.map": "/static/js/main.0bc0c0a8.js.map"
+    "main.css": "/Kurry-Leaf/static/css/main.488f03fe.css",
+    "main.js": "/Kurry-Leaf/static/js/main.31b57fad.js",
+    "index.html": "/Kurry-Leaf/index.html",
+    "main.488f03fe.css.map": "/Kurry-Leaf/static/css/main.488f03fe.css.map",
+    "main.31b57fad.js.map": "/Kurry-Leaf/static/js/main.31b57fad.js.map"
   },
   "entrypoints": [
     "static/css/main.488f03fe.css",
-    "static/js/main.0bc0c0a8.js"
+    "static/js/main.31b57fad.js"
   ]
 }
