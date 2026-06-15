@@ -44,14 +44,11 @@ Build a professional, modern, mobile-responsive restaurant website for "Kurry Le
 - **Verified**: Full mobile responsiveness at 320px and 375px
 
 ### Session 8 (Feb 14, 2026)
-- **Added**: Full restaurant menu (130+ items across 13 categories) from uploaded Kurry Leaf PDF
-  - New `/app/frontend/src/data/menuData.js` catalog (excludes blank pages 9-10)
-  - Redesigned `MenuSection.jsx` with dual-layout: image cards for Signature + elegant typography rows for all other categories (dotted-leader luxury menu style)
-  - Pill-style scrollable category tabs with edge fades, ChevronLeft/Right buttons (desktop) and auto-scroll-into-view on selection
-  - Per-category header with leaf decorator + uppercase tracking tagline
-  - Veg marker, Hindi/Marathi descriptions, Chef's Special badges (Sparkles icon)
-  - Inline quantity controls + cart integration preserved
-  - Mobile floating cart summary repositioned above WhatsApp FAB
+- **Added** then **Reverted** (per user request): Full 130-item menu from uploaded PDF
+  - `MenuSection.jsx` restored to the previous 5-category image-card layout (Signature, Starters, Main Course, Biryani, Mocktails)
+  - `/app/frontend/src/data/menuData.js` and the `data/` folder removed
+  - `.no-scrollbar` CSS utility removed from `index.css`
+  - All uploaded dish photos and styling preserved
 
 ## Key API Endpoints
 - `GET /api/reviews/google` - Returns synced reviews data
