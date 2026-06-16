@@ -43,16 +43,11 @@ Build a professional, modern, mobile-responsive restaurant website for "Kurry Le
 - **Replaced**: Logo with new circular brown/gold Kurry Leaf logo (navbar + footer)
 - **Verified**: Full mobile responsiveness at 320px and 375px
 
-### Session 8 (Feb 14, 2026)
-- **Added** then **Reverted** (per user request): Full 130-item menu attempt mixed into existing section
-- **Added (Final)**: Standalone "Full Menu" section using the uploaded Kurry Leaf PDF rendered as page images
-  - PDF (10 pages) converted to 2x JPGs via PyMuPDF, stored in `/app/frontend/public/menu-pages/`
-  - Original PDF also stored at `/menu-pages/kurry-leaf-menu.pdf` for download
-  - New component `MenuPagesSection.jsx` — premium grid of page cards with hover lift + zoom, click-to-open lightbox (prev/next arrows, page counter, keyboard nav, Esc close)
-  - Lightbox kept inside `#root` (no portals) — compliant with anti-branding CSS
-  - Section id `#full-menu`, smooth scroll via new "Full Menu" navbar link, scroll-margin-top for offset
-  - All paths use `process.env.PUBLIC_URL` to handle the `/Kurry-Leaf` homepage basename
-  - Existing dish-showcase MenuSection and Gallery left completely untouched
+### Session 8 (Feb 14-16, 2026)
+- **Added** then **Reverted**: Mixed full-menu grid attempt in existing Menu section
+- **Added (Final)**: Standalone "Full Menu" section using uploaded PDF rendered as page images
+- **Refined to slider**: Pages 9-10 removed (PDF trimmed in-place + images deleted). Section now a single-page slider with arrows, 8 dot indicators, horizontal thumbnail strip (auto-scrolls to active), keyboard ← → nav, swipe/drag on mobile, click-to-zoom lightbox, and Download PDF button.
+- **Fixed production blank-screen**: removed leftover `"homepage": "https://dinesh-762.github.io/Kurry-Leaf"` from `package.json` so assets resolve from root on `kurryleafrestaurant.in`
 
 ## Key API Endpoints
 - `GET /api/reviews/google` - Returns synced reviews data
