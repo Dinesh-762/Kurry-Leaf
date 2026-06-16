@@ -44,11 +44,15 @@ Build a professional, modern, mobile-responsive restaurant website for "Kurry Le
 - **Verified**: Full mobile responsiveness at 320px and 375px
 
 ### Session 8 (Feb 14, 2026)
-- **Added** then **Reverted** (per user request): Full 130-item menu from uploaded PDF
-  - `MenuSection.jsx` restored to the previous 5-category image-card layout (Signature, Starters, Main Course, Biryani, Mocktails)
-  - `/app/frontend/src/data/menuData.js` and the `data/` folder removed
-  - `.no-scrollbar` CSS utility removed from `index.css`
-  - All uploaded dish photos and styling preserved
+- **Added** then **Reverted** (per user request): Full 130-item menu attempt mixed into existing section
+- **Added (Final)**: Standalone "Full Menu" section using the uploaded Kurry Leaf PDF rendered as page images
+  - PDF (10 pages) converted to 2x JPGs via PyMuPDF, stored in `/app/frontend/public/menu-pages/`
+  - Original PDF also stored at `/menu-pages/kurry-leaf-menu.pdf` for download
+  - New component `MenuPagesSection.jsx` — premium grid of page cards with hover lift + zoom, click-to-open lightbox (prev/next arrows, page counter, keyboard nav, Esc close)
+  - Lightbox kept inside `#root` (no portals) — compliant with anti-branding CSS
+  - Section id `#full-menu`, smooth scroll via new "Full Menu" navbar link, scroll-margin-top for offset
+  - All paths use `process.env.PUBLIC_URL` to handle the `/Kurry-Leaf` homepage basename
+  - Existing dish-showcase MenuSection and Gallery left completely untouched
 
 ## Key API Endpoints
 - `GET /api/reviews/google` - Returns synced reviews data

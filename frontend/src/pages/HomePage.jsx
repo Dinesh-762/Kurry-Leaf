@@ -3,6 +3,7 @@ import Navbar from '@/components/layout/Navbar';
 import HeroSection from '@/components/sections/HeroSection';
 import AboutSection from '@/components/sections/AboutSection';
 import MenuSection from '@/components/sections/MenuSection';
+import MenuPagesSection from '@/components/sections/MenuPagesSection';
 import OffersSection from '@/components/sections/OffersSection';
 import GallerySection from '@/components/sections/GallerySection';
 import ReviewsSection from '@/components/sections/ReviewsSection';
@@ -21,6 +22,7 @@ export default function HomePage() {
         <AboutSection />
         <OffersSection />
         <MenuSection />
+        <MenuPagesSection />
         <GallerySection />
         <ReviewsSection />
         <GoogleReviewPrompt />
