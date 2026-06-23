@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Navbar from '@/components/layout/Navbar';
 import HeroSection from '@/components/sections/HeroSection';
 import AboutSection from '@/components/sections/AboutSection';
@@ -14,6 +14,18 @@ import FloatingWhatsApp from '@/components/common/FloatingWhatsApp';
 import CartDrawer from '@/components/cart/CartDrawer';
 
 export default function HomePage() {
+  // Ensure fresh page loads always start at the Home (top) section, unless
+  // the URL contains an explicit hash like #full-menu that the user wanted.
+  useEffect(() => {
+    if ('scrollRestoration' in window.history) {
+      window.history.scrollRestoration = 'manual';
+    }
+    const hash = window.location.hash;
+    if (!hash || hash === '#' || hash === '#home') {
+      window.scrollTo(0, 0);
+    }
+  }, []);
+
   return (
     <div className="min-h-screen bg-background">
       <Navbar />

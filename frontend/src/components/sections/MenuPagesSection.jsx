@@ -110,12 +110,25 @@ export const MenuPagesSection = () => {
     return () => window.removeEventListener('keydown', onKey);
   }, [prev, next, zoomed]);
 
-  // Keep active thumbnail visible
+  // Keep active thumbnail visible — scroll the thumbnail strip horizontally only.
+  // Skip on initial mount so we don't scroll the page down to the Full Menu section.
+  const didMountRef = useRef(false);
   useEffect(() => {
+    if (!didMountRef.current) {
+      didMountRef.current = true;
+      return;
+    }
     const container = thumbsRef.current;
     if (!container) return;
     const active = container.querySelector(`[data-thumb="${current}"]`);
-    if (active) active.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+    if (!active) return;
+
+    // Manually scroll only the thumbnail strip horizontally — avoids any
+    // vertical page scroll that `Element.scrollIntoView` can trigger.
+    const cRect = container.getBoundingClientRect();
+    const aRect = active.getBoundingClientRect();
+    const offset = (aRect.left - cRect.left) - (cRect.width / 2) + (aRect.width / 2);
+    container.scrollBy({ left: offset, behavior: 'smooth' });
   }, [current]);
 
   return (
