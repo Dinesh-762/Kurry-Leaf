@@ -6,39 +6,7 @@ import { Badge } from '@/components/ui/badge';
 import { Leaf, Flame, Plus, Minus, ShoppingCart } from 'lucide-react';
 import { useApp } from '@/context/AppContext';
 import { toast } from 'sonner';
-
-const menuCategories = [
-  { id: 'signature', name: 'Signature' },
-  { id: 'starters', name: 'Starters' },
-  { id: 'mains', name: 'Main Course' },
-  { id: 'biryani', name: 'Biryani' },
-  { id: 'mocktails', name: 'Mocktails' },
-];
-
-const menuItems = {
-  signature: [
-    { id: 1, name: 'Veg Lanchar', description: 'Herbed spinach patty with artistic plating & drizzle', price: 260, image: 'https://customer-assets.emergentagent.com/job_ac65c625-03b2-4167-85de-6caf2daabc02/artifacts/9go17kxb_sig%201%20.jpeg', isChefSpecial: true },
-    { id: 2, name: 'Paneer Matka Kebab', description: 'Slow-cooked paneer kebab served in a traditional clay pot', price: 330, image: 'https://customer-assets.emergentagent.com/job_ac65c625-03b2-4167-85de-6caf2daabc02/artifacts/iya2nc0g_sig%202.jpeg', isChefSpecial: true },
-    { id: 3, name: 'Paneer Kurchan', description: 'Rich creamy paneer in a spiced tomato gravy with fresh cream', price: 280, image: 'https://customer-assets.emergentagent.com/job_ac65c625-03b2-4167-85de-6caf2daabc02/artifacts/c04h7ml7_sig%203%20.jpeg', isChefSpecial: true },
-  ],
-  starters: [
-    { id: 4, name: 'Veg Lolypop', description: 'Crispy spiced vegetable lollipops served with tangy dipping sauce', price: 260, image: 'https://customer-assets.emergentagent.com/job_ac65c625-03b2-4167-85de-6caf2daabc02/artifacts/wjl9vo3g_starter%201%20.jpeg' },
-    { id: 5, name: 'Cheese Ciga Role', description: 'Golden crispy rolls stuffed with melted cheese & herbs', price: 310, image: 'https://customer-assets.emergentagent.com/job_ac65c625-03b2-4167-85de-6caf2daabc02/artifacts/9iqbbbbe_starter%203.jpeg' },
-  ],
-  mains: [
-    { id: 7, name: 'Veg Patiyala', description: 'Rich Patiala-style gravy with cream drizzle & fresh herbs', price: 285, image: 'https://customer-assets.emergentagent.com/job_ac65c625-03b2-4167-85de-6caf2daabc02/artifacts/5qcsiiwx_main%20c%201%20.jpeg' },
-    { id: 8, name: 'Paneer Kurchan', description: 'Herbed spinach paneer with artistic plating & garnish', price: 280, image: 'https://customer-assets.emergentagent.com/job_ac65c625-03b2-4167-85de-6caf2daabc02/artifacts/fy86szrd_main%201%20.jpeg' },
-  ],
-  biryani: [
-    { id: 10, name: 'Veg Dum Biryani', description: 'Layered rice with seasonal vegetables', price: 280, image: 'https://images.unsplash.com/photo-1633945274417-ab205ae69d10?w=400', isSpicy: true },
-    { id: 11, name: 'Paneer Biryani', description: 'Fragrant rice with spiced cottage cheese', price: 320, image: 'https://images.unsplash.com/photo-1633945274405-b6c8069047b0?w=400' },
-  ],
-  mocktails: [
-    { id: 20, name: 'Virgin Mojito', description: 'Classic lime & mint cooler with a refreshing fizz', price: 70, image: 'https://customer-assets.emergentagent.com/job_ac65c625-03b2-4167-85de-6caf2daabc02/artifacts/lkejt919_mocktail2.jpeg' },
-    { id: 21, name: 'Kalakhatta Mojito', description: 'Tangy berry-spiced mojito with a desi twist', price: 120, image: 'https://customer-assets.emergentagent.com/job_ac65c625-03b2-4167-85de-6caf2daabc02/artifacts/as1xmpvs_mocktail%201.jpeg' },
-    { id: 22, name: 'Watermelon Mojito', description: 'Fresh watermelon blended with mint & lime', price: 130, image: 'https://customer-assets.emergentagent.com/job_ac65c625-03b2-4167-85de-6caf2daabc02/artifacts/kwfp49ky_mocktail3.jpeg' },
-  ],
-};
+import { menuCategories, menuItems } from '@/data/menuData';
 
 const MenuItem = ({ item }) => {
   const { cart, addToCart, updateQuantity, adminSettings, config } = useApp();
