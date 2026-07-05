@@ -41,7 +41,6 @@ export const menuCategories = [
   { id: 'signature', name: 'Signature' },
   { id: 'starters',  name: 'Starters' },
   { id: 'mains',     name: 'Main Course' },
-  { id: 'biryani',   name: 'Biryani' },
   { id: 'mocktails', name: 'Mocktails' },
 ];
 
@@ -125,23 +124,7 @@ export const menuItems = {
   ],
 
   // -------------------- BIRYANI --------------------
-  biryani: [
-    {
-      id: 10,
-      name: 'Veg Dum Biryani',
-      description: 'Layered rice with seasonal vegetables',
-      price: 280,
-      image: 'https://images.unsplash.com/photo-1633945274417-ab205ae69d10?w=400',
-      isSpicy: true,
-    },
-    {
-      id: 11,
-      name: 'Paneer Biryani',
-      description: 'Fragrant rice with spiced cottage cheese',
-      price: 320,
-      image: 'https://images.unsplash.com/photo-1633945274405-b6c8069047b0?w=400',
-    },
-  ],
+  // (Removed — category no longer shown on the site)
 
   // -------------------- MOCKTAILS --------------------
   mocktails: [
