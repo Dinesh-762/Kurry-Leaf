@@ -22,6 +22,52 @@ const MenuItem = ({ item }) => {
     toast.success(`Added ${item.name} to cart`);
   };
 
+  // Compact text-only variant (used for dishes without a photo yet).
+  // Same premium-card styling and animations as the photo card, just no image block.
+  if (!item.image) {
+    return (
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="group"
+      >
+        <div className="premium-card h-full flex flex-col p-5">
+          <div className="flex items-start justify-between gap-3 flex-grow">
+            <h3 className="font-elegant text-base sm:text-lg font-medium text-foreground leading-snug">
+              {item.name}
+            </h3>
+            <Leaf className="w-4 h-4 text-primary shrink-0 mt-1" aria-label="Vegetarian" />
+          </div>
+          <div className="flex items-center justify-between pt-4 mt-4 border-t border-border/70">
+            <span className="font-elegant text-lg sm:text-xl font-medium text-foreground">₹{item.price}</span>
+            {adminSettings.orderingEnabled ? (
+              quantity > 0 ? (
+                <div className="flex items-center gap-2">
+                  <Button size="icon" variant="outline" className="h-8 w-8" onClick={() => updateQuantity(item.id, quantity - 1)}>
+                    <Minus className="w-4 h-4" />
+                  </Button>
+                  <span className="w-8 text-center font-semibold">{quantity}</span>
+                  <Button size="icon" variant="default" className="h-8 w-8" onClick={() => updateQuantity(item.id, quantity + 1)}>
+                    <Plus className="w-4 h-4" />
+                  </Button>
+                </div>
+              ) : (
+                <Button variant="elegant" size="sm" onClick={handleAdd}>
+                  <Plus className="w-4 h-4 mr-1" /> Add
+                </Button>
+              )
+            ) : (
+              <Button variant="outline" size="sm" onClick={() => window.open(`https://wa.me/91${config.phone}?text=I want to order ${item.name}`, '_blank')}>
+                Order
+              </Button>
+            )}
+          </div>
+        </div>
+      </motion.div>
+    );
+  }
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -127,7 +173,7 @@ export const MenuSection = () => {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
-            className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"
+            className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 items-start"
           >
             {menuItems[activeCategory]?.map((item) => (
               <MenuItem key={item.id} item={item} />
