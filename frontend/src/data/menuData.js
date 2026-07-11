@@ -41,7 +41,8 @@ export const menuCategories = [
   { id: 'signature', name: 'Signature' },
   { id: 'starters',  name: 'Starters' },
   { id: 'mains',     name: 'Main Course' },
-  { id: 'mocktails', name: 'Mocktails' },
+  { id: 'rice-beyond', name: 'Rice & Beyond' },
+  { id: 'desserts-mocktails', name: 'Desserts & Mocktails' },
 ];
 
 
@@ -254,8 +255,33 @@ export const menuItems = {
   // -------------------- BIRYANI --------------------
   // (Removed — category no longer shown on the site)
 
-  // -------------------- MOCKTAILS --------------------
-  mocktails: [
+  // -------------------- RICE & BEYOND --------------------
+  'rice-beyond': [
+    { id: 501, name: 'Steam Rice',                        price: 135 },
+    { id: 502, name: 'Plain Indrayani Rice',              price: 140 },
+    { id: 503, name: 'Jeera Rice',                        price: 140 },
+    { id: 504, name: 'Curd Rice',                         price: 160 },
+    { id: 505, name: 'Ghee Rice',                         price: 145 },
+    { id: 506, name: 'Veg Pulao',                         price: 210 },
+    { id: 507, name: 'Peas Pulao',                        price: 195 },
+    { id: 508, name: 'Paneer Pulao',                      price: 230 },
+    { id: 509, name: 'Matka Dum Biryani',                 price: 310 },
+    { id: 510, name: 'Dal Khichadi',                      price: 330 },
+    { id: 511, name: 'Palak Khichadi',                    price: 235 },
+    { id: 512, name: 'Hakka Noodles',                     price: 205 },
+    { id: 513, name: 'Schezwan Noodles',                  price: 210 },
+    { id: 514, name: 'Manchurian Noodles',                price: 240 },
+    { id: 515, name: 'Chilli Garlic Noodles',             price: 255 },
+    { id: 516, name: 'Terriyaki Noodles',                 price: 270 },
+    { id: 517, name: 'Fried Rice',                        price: 310 },
+    { id: 518, name: 'Schezwan Fried Rice',               price: 325 },
+    { id: 519, name: 'Triple Schezwan Fried Rice & Noodles', price: 270 },
+    { id: 520, name: 'Paneer Tikka Biryani',              price: 325 },
+    { id: 521, name: 'Burnt Garlic Fried Rice',           price: 225 },
+  ],
+
+  // -------------------- DESSERTS & MOCKTAILS --------------------
+  'desserts-mocktails': [
     {
       id: 20,
       name: 'Virgin Mojito',
@@ -277,6 +303,56 @@ export const menuItems = {
       price: 130,
       image: 'https://customer-assets.emergentagent.com/job_ac65c625-03b2-4167-85de-6caf2daabc02/artifacts/kwfp49ky_mocktail3.jpeg',
     },
+
+    // ----- Joyful Endings (Desserts) -----
+    { id: 601, name: 'Tall Glory',            price: 160 },
+    { id: 602, name: 'Funny Bunny',           price: 180 },
+    { id: 603, name: 'Mango Exotica',         price: 170 },
+    { id: 604, name: 'Titanic',               price: 180 },
+    { id: 605, name: 'Blueberry Cheesecake',  price: 250 },
+    { id: 606, name: 'Nutella Cheesecake',    price: 270 },
+    { id: 607, name: 'Gulab Jamun (2 pcs)',   price: 90  },
+    { id: 608, name: 'Rasgulla (2 pcs)',      price: 95  },
+    { id: 609, name: 'Jamun Shots',           price: 50  },
+
+    // ----- Beverage -----
+    { id: 621, name: 'Mineral Water',                    price: 20 },
+    { id: 622, name: 'Fresh Lime Soda (Sweet/Salt)',     price: 40 },
+    { id: 623, name: 'Fresh Lime Water (Sweet/Salt)',    price: 30 },
+    { id: 624, name: 'Masala Buttermilk',                price: 45 },
+
+    // ----- Ice Creams -----
+    { id: 641, name: 'Mango Ice Cream',          price: 80  },
+    { id: 642, name: 'Chocolate Ice Cream',      price: 90  },
+    { id: 643, name: 'Butterscotch Ice Cream',   price: 80  },
+    { id: 644, name: 'Strawberry Ice Cream',     price: 90  },
+    { id: 645, name: 'Vanilla Ice Cream',        price: 80  },
+    { id: 646, name: 'Chocolate Brownie',        price: 95  },
+    { id: 647, name: 'Cookies and Cream',        price: 95  },
+    { id: 648, name: 'Afghan Dry Fruit',         price: 105 },
+    { id: 649, name: 'Falooda Ice Cream',        price: 110 },
+
+    // ----- Mocktails & Smoothies -----
+    { id: 661, name: 'Berry Melon Spritz',       price: 230 },
+    { id: 662, name: 'Hot Mess',                 price: 170 },
+    { id: 663, name: 'Black and Blue',           price: 170 },
+    { id: 664, name: 'Cranberry Mojito',         price: 140 },
+    { id: 665, name: 'Watermelon / Strawberry / Kiwi / Green Apple Mojito', price: 140 },
+    { id: 666, name: "Devil's Eye",              price: 210 },
+    { id: 667, name: 'Cold Coffee',              price: 120 },
+    { id: 668, name: 'Chocolate Cold Coffee',    price: 140 },
+    { id: 669, name: 'Oreo Shake',               price: 180 },
+    { id: 670, name: 'Kit Kat Shake',            price: 180 },
+    { id: 671, name: 'Strawberry Smoothie',      price: 220 },
+
+    // ----- Milkshakes -----
+    { id: 681, name: 'Pineapple Milkshake',      price: 160 },
+    { id: 682, name: 'Mango Milkshake',          price: 160 },
+    { id: 683, name: 'Strawberry Milkshake',     price: 170 },
+    { id: 684, name: 'Chocolate Milkshake',      price: 170 },
+    { id: 685, name: 'Butterscotch Milkshake',   price: 180 },
+    { id: 686, name: 'Blue Lagoon',              price: 190 },
+    { id: 687, name: 'Pinacolada',               price: 230 },
   ],
 
 };
