@@ -86,6 +86,22 @@ export const menuItems = {
       image: 'https://customer-assets.emergentagent.com/job_ac65c625-03b2-4167-85de-6caf2daabc02/artifacts/c04h7ml7_sig%203%20.jpeg',
       isChefSpecial: true,
     },
+
+    // ----- Chef's Specials (text-only, no photos yet) -----
+    { id: 51, name: 'Manchow Soup',                    price: 135 },
+    { id: 52, name: 'Dal Shorba',                      price: 145 },
+    { id: 53, name: 'Burnt Garlic Cheese Paneer Tikka', price: 320 },
+    { id: 54, name: 'Tandoori Platter',                price: 555 },
+    { id: 55, name: 'Cheese Cigar Roll',               price: 310 },
+    { id: 56, name: 'Paneer Chilli',                   price: 280 },
+    { id: 57, name: 'Paneer Sathe',                    price: 330 },
+    { id: 58, name: 'Yesar Wadi',                      price: 255 },
+    { id: 59, name: 'Umar Handi',                      price: 290 },
+    { id: 60, name: 'Paneer Rajwada',                  price: 285 },
+    { id: 61, name: 'Paneer Cheese Roll Masala',       price: 295 },
+    { id: 62, name: 'Kaju Masala',                     price: 275 },
+    { id: 63, name: 'Veg Jalfrezi',                    price: 260 },
+    { id: 64, name: "Kurry Leaf's Special",            price: 385 },
   ],
 
   // -------------------- STARTERS --------------------
