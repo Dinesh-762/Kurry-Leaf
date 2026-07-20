@@ -7,8 +7,8 @@ import { Star, Quote, ExternalLink } from 'lucide-react';
 const REVIEW_REDIRECT = 'https://share.google/NG3pCUeAMgPUBIw8b';
 
 // Real Google reviews — update here to change what visitors see.
-const RATING = 3.9;
-const TOTAL_REVIEWS = 119;
+const RATING = 4.0;
+const TOTAL_REVIEWS = 141;
 
 const REVIEWS = [
   {
