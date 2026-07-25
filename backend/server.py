@@ -124,7 +124,7 @@ async def get_status_checks():
 # --- Curated Google Reviews (fallback when API key not available) ---
 CURATED_REVIEWS = {
     "rating": 4.0,
-    "total_reviews": 130,
+    "total_reviews": 134,
     "reviews": [
         {
             "author_name": "Snehal Patil",
