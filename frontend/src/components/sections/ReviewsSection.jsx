@@ -8,7 +8,7 @@ const REVIEW_REDIRECT = 'https://share.google/NG3pCUeAMgPUBIw8b';
 
 // Real Google reviews — update here to change what visitors see.
 const RATING = 4.0;
-const TOTAL_REVIEWS = 136;
+const TOTAL_REVIEWS = 134;
 
 const REVIEWS = [
   {

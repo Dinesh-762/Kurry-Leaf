@@ -58,7 +58,7 @@ export const HeroSection = () => {
                 <span className="font-semibold text-sm">3.9</span>
               </div>
               <span className="w-px h-4 bg-white/30" />
-              <span className="text-white/80 text-sm tracking-wide">119 Google Reviews</span>
+              <span className="text-white/80 text-sm tracking-wide">136 Google Reviews</span>
             </div>
           </motion.div>
 
