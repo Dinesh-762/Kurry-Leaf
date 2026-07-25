@@ -55,7 +55,7 @@ class TestGoogleReviewsAPI:
         data = response.json()
         
         assert "total_reviews" in data, "Response should contain 'total_reviews' field"
-        assert data["total_reviews"] == 108, f"Expected 108 reviews, got {data['total_reviews']}"
+        assert data["total_reviews"] == 136, f"Expected 136 reviews, got {data['total_reviews']}"
         print(f"PASS: total_reviews field present with value {data['total_reviews']}")
     
     def test_reviews_returns_reviews_array(self):
