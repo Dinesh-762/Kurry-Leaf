@@ -55,7 +55,7 @@ export const HeroSection = () => {
             <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-white/10 backdrop-blur-md border border-white/10">
               <div className="flex items-center gap-1.5 text-accent">
                 <Star className="w-4 h-4 fill-current" />
-                <span className="font-semibold text-sm">3.9</span>
+                <span className="font-semibold text-sm">4.0</span>
               </div>
               <span className="w-px h-4 bg-white/30" />
               <span className="text-white/80 text-sm tracking-wide">136 Google Reviews</span>
